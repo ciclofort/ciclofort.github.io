@@ -30,8 +30,8 @@ jobs:
     - name: Ofuscar todos os arquivos JS
       run: |
         mkdir -p dist
-        javascript-obfuscator ./ --output ./dist --compact true --control-flow-flattening true --excludes dist/**
-        javascript-obfuscator ./data --output ./dist/data --compact true --control-flow-flattening true --excludes dist/**
+        javascript-obfuscator ./ --output ./dist --compact true --control-flow-flattening true --exclude dist/**
+        javascript-obfuscator ./data --output ./dist/data --compact true --control-flow-flattening true --exclude dist/**
 
     - name: Mudar as rotas dos scripts no HTML automaticamente
       run: |
