@@ -11,6 +11,9 @@ permissions:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     steps:
     - name: Checkout do código
@@ -19,7 +22,7 @@ jobs:
     - name: Configurar o Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: 18
+        node-version: 22 
 
     - name: Instalar o Ofuscador
       run: npm install -g javascript-obfuscator
