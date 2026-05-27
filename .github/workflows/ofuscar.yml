@@ -27,6 +27,24 @@ jobs:
     - name: Instalar o Ofuscador
       run: npm install -g javascript-obfuscator
 
+    - name: Atualizar links (Cache Busting) no HTML e JavaScript
+      run: |
+        SHORT_SHA=$(echo ${{ github.sha }} | cut -c1-7)        
+        
+        sed -i -E "s/src=\"([^\/]+)\.js\"/src=\"dist\/\1.${SHORT_SHA}.js\"/g" index.html
+
+        for f in *.js; do
+          if [ -f "$f" ]; then
+            sed -i -E "s/([\"'])\.?\/?([^\/]+)\.js([\"'])/\1dist\/\2.${SHORT_SHA}.js\3/g" "$f"
+          fi
+        done
+
+        for f in data/*.js; do
+          if [ -f "$f" ]; then
+            sed -i -E "s/([\"'])\.?\/?([^\/]+)\.js([\"'])/\1.\/\2.${SHORT_SHA}.js\3/g" "$f"
+          fi
+        done
+
     - name: Ofuscar e Renomear JS (Cache Busting)
       run: |
         mkdir -p dist/data
