@@ -66,7 +66,7 @@ function add(code) {
   const { qnt, product } = getProductAndInput(code);
   if(product.quantity === product.maxQuantity) return;
   product.quantity = product.quantity + 1;
-  qnt.value = (product.quantity <= product.maxQuantity) ? product.quantity : product.maxQuantity;
+  qnt.value = product.quantity;
   applyChanges();
 }
 
@@ -94,29 +94,19 @@ function normalizeMoney(value) {
   });
 }
 
+function defineQuantity(quantity, product) {
+  if (isNaN(quantity) || quantity < 0) return product.quantity;
+  return (quantity <= product.maxQuantity) ? quantity : product.maxQuantity;
+}
+
 function changeQuantity(value, code) {
   const { qnt, product } = getProductAndInput(code);
-  let quantity = parseInt(value);
+  const quantity = parseInt(value);
 
-  if(value === "") {
-    product.quantity = 0;
-    qnt.value = product.quantity;
-    changeTotalPrice();
-    toggleSendBtn();
-    return;
-  }
+  product.quantity = (value === "") ? 0 : defineQuantity(quantity, product);
 
-  if (isNaN(quantity) || quantity < 0) {
-    qnt.value = product.quantity;
-    changeTotalPrice();
-    toggleSendBtn();
-    return;
-  }
-
-  product.quantity = quantity;
   qnt.value = product.quantity;
-  changeTotalPrice();
-  toggleSendBtn();
+  applyChanges();
 }
 
 function setProductsPerCode() {
