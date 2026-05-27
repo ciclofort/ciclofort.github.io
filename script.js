@@ -24,10 +24,18 @@ function processRoute() {
   loadData();
 }
 
+function setStorage(key, data) {
+  sessionStorage.setItem(key, JSON.stringify(data));
+}
+
+function getStorage(key) {
+  return JSON.parse(sessionStorage.getItem(key));
+}
+
 let totalPrice = document.getElementById("total-price");
 let sendBtn = document.getElementById("send-btn");
 let products = [];
-let productsPerCode = {};
+let productsPerCode = getStorage("productsPerCode") ?? {};
 
 function getProductAndInput(code) {
   const qnt = document.getElementById(`qnt-input-${code}`);
@@ -40,13 +48,18 @@ function toggleSendBtn() {
   sendBtn.disabled = !hasOneProduct;
 }
 
+function applyChanges() {
+  changeTotalPrice();
+  toggleSendBtn();
+  setStorage("productsPerCode", productsPerCode);
+}
+
 function subtract(code) {
   const { qnt, product } = getProductAndInput(code);
   if(product.quantity === 0) return;
   product.quantity = product.quantity - 1;
   qnt.value = product.quantity;
-  changeTotalPrice();
-  toggleSendBtn();
+  applyChanges();
 }
 
 function add(code) {
@@ -54,16 +67,14 @@ function add(code) {
   if(product.quantity === product.maxQuantity) return;
   product.quantity = product.quantity + 1;
   qnt.value = product.quantity;
-  changeTotalPrice();
-  toggleSendBtn();
+  applyChanges();
 }
 
 function zeroQuantity(code) {
   const { qnt, product } = getProductAndInput(code);
   product.quantity = 0;
   qnt.value = product.quantity;
-  changeTotalPrice();
-  toggleSendBtn();
+  applyChanges();
 }
 
 function getTotalPrice() {
@@ -113,7 +124,10 @@ async function loadData() {
     try {
       const data = await import("./data/" + dataFilename);
       products = data.products
-      products.forEach((product) => productsPerCode[product.code] = {...product, "quantity": 0});
+      if(Object.keys(productsPerCode).length === 0) {
+        products.forEach((product) => productsPerCode[product.code] = {...product, "quantity": 0});
+        setStorage("productsPerCode", productsPerCode);
+      }
       setProducts();
     }
     catch(err) {
@@ -126,6 +140,7 @@ function setProducts() {
   let productsHtml = "";
   products.map((product) => {
     const imgName = "./assets/" + product.code.replaceAll('.', '') + ".jpg";
+    const productItem = productsPerCode[product.code];
     productsHtml += `
       <div class="product-card">
         <button class="img-btn" onclick="zoomImg('${imgName}')">
@@ -141,7 +156,7 @@ function setProducts() {
           <div class="product-numbers">
             <div class="input">
               <button class="qnt-btn" onclick="subtract('${product.code}')">-</button>
-              <input class="qnt-input" type="number" value="0" id="qnt-input-${product.code}" oninput="changeQuantity(this.value, '${product.code}')">
+              <input class="qnt-input" type="number" value="${productItem ? productItem.quantity : 0}" id="qnt-input-${product.code}" oninput="changeQuantity(this.value, '${product.code}')">
               <button class="qnt-btn" onclick="add('${product.code}')">+</button>
             </div>
             <div>
