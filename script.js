@@ -119,15 +119,21 @@ function changeQuantity(value, code) {
   toggleSendBtn();
 }
 
+function setProductsPerCode() {
+  if(Object.keys(productsPerCode).length === 0) {
+    products.forEach((product) => productsPerCode[product.code] = {...product, "quantity": 0});
+    setStorage("productsPerCode", productsPerCode);
+    return;
+  }
+  applyChanges();
+}
+
 async function loadData() {
   if (products.length === 0) {
     try {
       const data = await import("./data/" + dataFilename);
       products = data.products
-      if(Object.keys(productsPerCode).length === 0) {
-        products.forEach((product) => productsPerCode[product.code] = {...product, "quantity": 0});
-        setStorage("productsPerCode", productsPerCode);
-      }
+      setProductsPerCode();
       setProducts();
     }
     catch(err) {
