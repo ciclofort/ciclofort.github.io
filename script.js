@@ -66,7 +66,7 @@ function add(code) {
   const { qnt, product } = getProductAndInput(code);
   if(product.quantity === product.maxQuantity) return;
   product.quantity = product.quantity + 1;
-  qnt.value = (product.quantity <= product.maxQuantity) ? product.quantity : product.maxQuantity;
+  qnt.value = product.quantity;
   applyChanges();
 }
 
@@ -94,29 +94,19 @@ function normalizeMoney(value) {
   });
 }
 
+function defineQuantity(quantity, product) {
+  if (isNaN(quantity) || quantity < 0) return product.quantity;
+  return (quantity <= product.maxQuantity) ? quantity : product.maxQuantity;
+}
+
 function changeQuantity(value, code) {
   const { qnt, product } = getProductAndInput(code);
-  let quantity = parseInt(value);
+  const quantity = parseInt(value);
 
-  if(value === "") {
-    product.quantity = 0;
-    qnt.value = product.quantity;
-    changeTotalPrice();
-    toggleSendBtn();
-    return;
-  }
+  product.quantity = (value === "") ? 0 : defineQuantity(quantity, product);
 
-  if (isNaN(quantity) || quantity < 0) {
-    qnt.value = product.quantity;
-    changeTotalPrice();
-    toggleSendBtn();
-    return;
-  }
-
-  product.quantity = quantity;
   qnt.value = product.quantity;
-  changeTotalPrice();
-  toggleSendBtn();
+  applyChanges();
 }
 
 function setProductsPerCode() {
@@ -143,11 +133,10 @@ async function loadData() {
 }
 
 function setProducts() {
-  let productsHtml = "";
-  products.map((product) => {
+  const productsHtml = products.reduce((acc, product) => {
     const imgName = "./assets/" + product.code.replaceAll('.', '') + ".jpg";
     const productItem = productsPerCode[product.code];
-    productsHtml += `
+    return acc + `
       <div class="product-card">
         <button class="img-btn" id="btn-${imgName}" onclick="zoomImg('${imgName}')" disabled>
           <img class="product-img" src="${imgName}" alt="${product.name}" onload="document.getElementById('btn-${imgName}').removeAttribute('disabled')">
@@ -172,7 +161,7 @@ function setProducts() {
         </div>
       </div>
     `
-  })
+  }, "")
   productList.innerHTML = productsHtml;
 }
 
@@ -214,7 +203,7 @@ function closeZoom() {
   }
 }
 
-import("./routes.ffe8a38.js").then((modulo) => {
+import("./routes.36f2858.js").then((modulo) => {
   window.routes = modulo.routes;
   processRoute();
 });
