@@ -203,14 +203,22 @@ function zoomImg(src) {
   
   modal.style.display = "flex";
   modalImg.src = src;
+  history.pushState({ modalAberto: true }, '');
 }
 
 function closeZoom() {
   const modal = document.getElementById("image-modal");
   modal.style.display = "none";
+  if (history.state && history.state.modalAberto) {
+    history.back();
+  }
 }
 
 import("./routes.js").then((modulo) => {
   window.routes = modulo.routes;
   processRoute();
+});
+
+window.addEventListener('popstate', function (event) {
+  closeZoom();
 });
