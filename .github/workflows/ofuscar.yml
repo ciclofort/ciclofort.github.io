@@ -35,13 +35,7 @@ jobs:
 
         for f in *.js; do
           if [ -f "$f" ]; then
-            sed -i -E "s/([\"'])\.?\/?([^\/]+)\.js([\"'])/\1dist\/\2.${SHORT_SHA}.js\3/g" "$f"
-          fi
-        done
-
-        for f in data/*.js; do
-          if [ -f "$f" ]; then
-            sed -i -E "s/([\"'])\.?\/?([^\/]+)\.js([\"'])/\1.\/\2.${SHORT_SHA}.js\3/g" "$f"
+            sed -i -E "s/([\"'])\.?\/?([^\/]+)\.js([\"'])/\1\2.${SHORT_SHA}.js\3/g" "$f"
           fi
         done
 
