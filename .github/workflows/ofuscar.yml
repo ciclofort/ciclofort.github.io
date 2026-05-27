@@ -1,0 +1,41 @@
+name: Ofuscar e Publicar no GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout do código
+      uses: actions/checkout@v4
+
+    - name: Configurar o Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 18
+
+    - name: Instalar o Ofuscador
+      run: npm install -g javascript-obfuscator
+
+    - name: Ofuscar todos os arquivos JS
+      run: |
+        mkdir -p dist
+        javascript-obfuscator ./ --output ./dist --compact true --control-flow-flattening true --excludes dist/**
+        javascript-obfuscator ./data --output ./dist/data --compact true --control-flow-flattening true --excludes dist/**
+
+    - name: Mudar as rotas dos scripts no HTML automaticamente
+      run: |
+        sed -i -E 's/src="([^"\/]+\.js)"/src="dist\/\1"/g' index.html
+
+    - name: Publicar no GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        folder: . 
+        branch: gh-pages
