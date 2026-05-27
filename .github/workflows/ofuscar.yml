@@ -27,15 +27,31 @@ jobs:
     - name: Instalar o Ofuscador
       run: npm install -g javascript-obfuscator
 
-    - name: Ofuscar todos os arquivos JS
+    - name: Ofuscar e Renomear JS (Cache Busting)
       run: |
-        mkdir -p dist
-        javascript-obfuscator ./ --output ./dist --compact true --control-flow-flattening true --exclude dist/**
-        javascript-obfuscator ./data --output ./dist/data --compact true --control-flow-flattening true --exclude dist/**
+        mkdir -p dist/data
+        
+        SHORT_SHA=$(echo ${{ github.sha }} | cut -c1-7)
+        
+        for f in *.js; do
+          if [ -f "$f" ]; then
+            filename="${f%.*}"
+            javascript-obfuscator "$f" --output "dist/${filename}.${SHORT_SHA}.js" --compact true --control-flow-flattening true
+          fi
+        done
 
-    - name: Mudar as rotas dos scripts no HTML automaticamente
+        for f in data/*.js; do
+          if [ -f "$f" ]; then
+            filename=$(basename "$f" .js)
+            javascript-obfuscator "$f" --output "dist/data/${filename}.${SHORT_SHA}.js" --compact true --control-flow-flattening true
+          fi
+        done
+
+    - name: Atualizar links no HTML
       run: |
-        sed -i -E 's/src="([^"\/]+\.js)"/src="dist\/\1"/g' index.html
+        SHORT_SHA=$(echo ${{ github.sha }} | cut -c1-7)        
+        
+        sed -i -E "s/src=\"([^\/]+)\.js\"/src=\"dist\/\1.${SHORT_SHA}.js\"/g" index.html
 
     - name: Publicar no GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4
