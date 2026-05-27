@@ -214,7 +214,7 @@ function closeZoom() {
   }
 }
 
-import("dist/routes.5c7c1af.js").then((modulo) => {
+import("routes.1f32590.js").then((modulo) => {
   window.routes = modulo.routes;
   processRoute();
 });

@@ -1,6 +1,6 @@
 
 export const routes = {
-  "dist/1c76b53d": "tab3.5c7c1af.js",
-  "dist/2a399152": "novo.5c7c1af.js",
-  "dist/1ddab437": "promo.5c7c1af.js"
+  "1c76b53d": "tab3.1f32590.js",
+  "2a399152": "novo.1f32590.js",
+  "1ddab437": "promo.1f32590.js"
 }
