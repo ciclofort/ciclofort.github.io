@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="./style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="scrollable-content" id="scrollable-content">
+      <header>Ciclofort</header>
+      <div id="product-list"></div>
+      <div id="not-found" style="display: none">Não há nada aqui :(</div>
+    </div>
+    <footer id="footer">
+      <div class="total-price">
+        <span>Total: </span>
+        <span id="total-price">R$ 0,00</span>
+      </div>
+      <button id="send-btn" disabled="true" onclick="sendMessage()">
+        Enviar Pedido para o Whatsapp
+      </button>
+    </footer>
+    <div id="image-modal" class="modal" onclick="closeZoom()">
+      <span class="close-modal">&times;</span>
+      <img class="modal-content" id="img-expanded">
+    </div>
+  </body>
+  <script type="module" src="script.js"></script>
+</html>
