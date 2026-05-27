@@ -66,7 +66,7 @@ function add(code) {
   const { qnt, product } = getProductAndInput(code);
   if(product.quantity === product.maxQuantity) return;
   product.quantity = product.quantity + 1;
-  qnt.value = product.quantity;
+  qnt.value = (product.quantity <= product.maxQuantity) ? product.quantity : product.maxQuantity;
   applyChanges();
 }
 
@@ -78,7 +78,7 @@ function zeroQuantity(code) {
 }
 
 function getTotalPrice() {
-  return Object.values(productsPerCode).reduce((acc, product) => acc + product.quantity * product.tab1, 0);
+  return Object.values(productsPerCode).reduce((acc, product) => acc + product.quantity * product.price, 0);
 }
 
 function changeTotalPrice() {
@@ -149,12 +149,12 @@ function setProducts() {
     const productItem = productsPerCode[product.code];
     productsHtml += `
       <div class="product-card">
-        <button class="img-btn" onclick="zoomImg('${imgName}')">
-          <img class="product-img" src="${imgName}" alt="${product.name}">
+        <button class="img-btn" id="btn-${imgName}" onclick="zoomImg('${imgName}')" disabled>
+          <img class="product-img" src="${imgName}" alt="${product.name}" onload="document.getElementById('btn-${imgName}').removeAttribute('disabled')">
         </button>
         <div class="product">
           <div class="product-data">
-            <span>${product.name}</span>
+            <span>${product.name.slice(0, 55)}</span>
             <button class="zero-btn" onclick="zeroQuantity('${product.code}')">
               ⟲ Zerar
             </button>
@@ -166,7 +166,7 @@ function setProducts() {
               <button class="qnt-btn" onclick="add('${product.code}')">+</button>
             </div>
             <div>
-              <span class="price-tag" id="price-${product.code}">${normalizeMoney(product.tab1)}</span>
+              <span class="price-tag" id="price-${product.code}">${normalizeMoney(product.price)}</span>
             </div>
           </div>
         </div>
@@ -180,7 +180,7 @@ function formatMessage() {
   const productsStr = Object.keys(productsPerCode).reduce((acc, code) => {
     const product = productsPerCode[code];
     if(product.quantity === 0) return acc + "";
-    return acc + `${code} Qtde: ${product.quantity} ${product.name} ${normalizeMoney(product.tab1)}\n`
+    return acc + `${code} Qtde: ${product.quantity} ${product.name} ${normalizeMoney(product.price)}\n`
   }, "")
   const totalPrice = getTotalPrice();
   return productsStr + (`\nTotal do Pedido: ${normalizeMoney(totalPrice)}` ?? "")
