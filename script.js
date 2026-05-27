@@ -133,11 +133,10 @@ async function loadData() {
 }
 
 function setProducts() {
-  let productsHtml = "";
-  products.map((product) => {
+  const productsHtml = products.reduce((acc, product) => {
     const imgName = "./assets/" + product.code.replaceAll('.', '') + ".jpg";
     const productItem = productsPerCode[product.code];
-    productsHtml += `
+    return acc + `
       <div class="product-card">
         <button class="img-btn" id="btn-${imgName}" onclick="zoomImg('${imgName}')" disabled>
           <img class="product-img" src="${imgName}" alt="${product.name}" onload="document.getElementById('btn-${imgName}').removeAttribute('disabled')">
@@ -162,7 +161,7 @@ function setProducts() {
         </div>
       </div>
     `
-  })
+  }, "")
   productList.innerHTML = productsHtml;
 }
 
