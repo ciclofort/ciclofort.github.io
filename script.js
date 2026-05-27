@@ -1,5 +1,3 @@
-import { routes } from "./routes.js";
-
 let dataFilename = "";
 let notFound = document.getElementById("not-found");
 let scrollableContent = document.getElementById("scrollable-content");
@@ -25,9 +23,6 @@ function processRoute() {
 
   loadData();
 }
-
-window.addEventListener('hashchange', processRoute);
-window.addEventListener('load', processRoute);
 
 let totalPrice = document.getElementById("total-price");
 let sendBtn = document.getElementById("send-btn");
@@ -118,6 +113,7 @@ async function loadData() {
     try {
       const data = await import("./data/" + dataFilename);
       products = data.products
+      products.forEach((product) => productsPerCode[product.code] = {...product, "quantity": 0});
       setProducts();
     }
     catch(err) {
@@ -174,7 +170,7 @@ function sendMessage() {
   
   let textoCodificado = encodeURIComponent(texto);
   
-  let numero = "5585991516096";
+  let numero = "558533113400";
   let linkFinal = `https://wa.me/${numero}?text=${textoCodificado}`;
   
   window.open(linkFinal, '_blank');
@@ -192,3 +188,8 @@ function closeZoom() {
   const modal = document.getElementById("image-modal");
   modal.style.display = "none";
 }
+
+import("./routes.js").then((modulo) => {
+  window.routes = modulo.routes;
+  processRoute();
+});
