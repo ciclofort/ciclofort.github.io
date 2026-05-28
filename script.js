@@ -203,7 +203,7 @@ function closeZoom() {
   }
 }
 
-import("./routes.36f2858.js").then((modulo) => {
+import("./routes.bfc7a50.js").then((modulo) => {
   window.routes = modulo.routes;
   processRoute();
 });
