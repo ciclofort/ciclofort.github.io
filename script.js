@@ -180,7 +180,7 @@ function sendMessage() {
   
   let textoCodificado = encodeURIComponent(texto);
   
-  let numero = "558533113400";
+  let numero = "558533113401";
   let linkFinal = `https://wa.me/${numero}?text=${textoCodificado}`;
   
   window.open(linkFinal, '_blank');
