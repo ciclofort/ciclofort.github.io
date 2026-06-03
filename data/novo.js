@@ -1,1 +1,432 @@
-export const products = [{"marca":"PACO","code":"100.175.062","name":"ALAVANCA CAMBIO 3X7 VEL V-FIRE C\/MAC. ALUM PRETA C\/CABOS S\/C","price":32.73,"maxQuantity":1},{"marca":"PACO","code":"100.178.004","name":"AMORTECEDOR P\/QUADRO F.SUSP. 150MM PRATA M.PTO","price":22.32,"maxQuantity":3},{"marca":"PACO","code":"100.108.046","name":"BLOCAGEM P\/ABRAC. SELIM ACO CROM.","price":7.44,"maxQuantity":41},{"marca":"IMPORTADO","code":"100.113.011","name":"CABO FREIO DIANT. 800MM 19F.","price":0.58,"maxQuantity":6},{"marca":"GTA","code":"100.201.114","name":"CADEADO ESPIRAL 12MM X 1,5M PRETO C\/SUP.","price":16.37,"maxQuantity":3},{"marca":"GTA","code":"100.201.111","name":"CADEADO ESPIRAL 12MM X 1M PRETO C\/SUP.","price":12.65,"maxQuantity":70},{"marca":"PACO","code":"100.110.052","name":"CAMARA 16 V.AMERIC. 35MM BUTILICA (1.75 A 1.90)","price":8.91,"maxQuantity":21},{"marca":"CANELLO","code":"072.110.000","name":"CAMARA 20 CE","price":12.48,"maxQuantity":81},{"marca":"CANELLO","code":"072.110.005","name":"CAMARA 24 CE","price":13.77,"maxQuantity":17},{"marca":"CANELLO","code":"072.110.001","name":"CAMARA 26 CE","price":13.88,"maxQuantity":29},{"marca":"PACO","code":"100.110.080","name":"CAMARA 26 V.AMERIC. 35MM BUTILICA BK","price":9.93,"maxQuantity":46},{"marca":"PACO","code":"100.118.199","name":"CAMBIO TRAS 7VEL C\/GANCH. INDEX PRETO P\/43D.","price":11.9,"maxQuantity":52},{"marca":"SUNRUN","code":"100.118.126","name":"CAMBIO TRAS 7VEL S\/GANCH. PRETO INDEX CAGE LONGO P\/43D","price":15.32,"maxQuantity":18},{"marca":"PACO","code":"100.118.165","name":"CAMBIO TRAS 8VEL S\/GANCH. PRETO INDEX","price":16.37,"maxQuantity":36},{"marca":"PACO","code":"100.112.021","name":"CAMPAINHA TRIM TRIM CROM.","price":8.18,"maxQuantity":43},{"marca":"GTA","code":"100.119.049","name":"CANOTE ALUM. C\/CARR. 31.6 X 400MM PRETO","price":32.73,"maxQuantity":4},{"marca":"PACO","code":"100.123.078","name":"CESTA PLASTICA 26 MTB MARROM 34X22X25","price":20.83,"maxQuantity":20},{"marca":"GTA","code":"100.123.074","name":"CESTA POLIESTER PRETA 35X26X25 C\/SUP.ENGATE RAPIDO","price":86.86,"maxQuantity":12},{"marca":"PACO","code":"100.128.085","name":"CORRENTE FINA 116 9V P903 INDEX","price":26.78,"maxQuantity":33},{"marca":"PACO","code":"100.129.040","name":"CUBO F.DISCO ACO D\/T 36F C\/ESF. PRETO C\/BLOC.","price":28.27,"maxQuantity":51},{"marca":"PACO","code":"100.130.036","name":"DESCANSO LATERAL 29 ALUM C\/REG PRETO FIXA NO QUADRO","price":19.94,"maxQuantity":203},{"marca":"PACO","code":"100.131.097","name":"EIXO TRAS. FURADO 135X145MM C\/ESP PTO. (S\/BLOC.)","price":5.95,"maxQuantity":27},{"marca":"PACO","code":"100.133.002","name":"ESPACADOR ALUM 10MM PRETO FINO","price":0.65,"maxQuantity":10},{"marca":"PACO","code":"100.133.013","name":"ESPACADOR ALUM 10MM PRETO GROSSO","price":0.97,"maxQuantity":10},{"marca":"PACO","code":"100.136.223","name":"FREIO A DISCO MEC. D\/T PTO C\/PINCA E DISCO 160MM DB01 10P","price":32.73,"maxQuantity":17},{"marca":"PACO","code":"100.136.218","name":"FREIO V-BRAKE NYLON 04 PCS ORBITAL PRETO 110MM","price":13.39,"maxQuantity":807},{"marca":"PACO","code":"100.139.095","name":"GARFO SUSP. 29 ACO AHEAD PRETO P\/F.DISCO","price":60.9,"maxQuantity":50},{"marca":"PACO","code":"100.146.072","name":"MACANETA NYLON VB PRETA C\/REG.AL.","price":6.7,"maxQuantity":35},{"marca":"GTA","code":"100.137.035","name":"MANGUEIRA P\/FREIO HIDRAULICO (1 METRO)","price":10.41,"maxQuantity":25},{"marca":"GTA","code":"100.147.129","name":"MANOPLA MTB BORRACHA NBR AZUL 135MM","price":5.06,"maxQuantity":87},{"marca":"GTA","code":"100.147.128","name":"MANOPLA MTB BORRACHA NBR PRETA 135MM","price":5.06,"maxQuantity":101},{"marca":"GTA","code":"100.147.144","name":"MANOPLA MTB BORRACHA NBR ROSA 135MM","price":5.06,"maxQuantity":20},{"marca":"GTA","code":"100.147.145","name":"MANOPLA MTB BORRACHA NBR VERDE 135MM","price":5.06,"maxQuantity":41},{"marca":"GTA","code":"100.147.135","name":"MANOPLA MTB BORRACHA TPR PRETA 125MM","price":3.87,"maxQuantity":54},{"marca":"NECO","code":"100.148.013","name":"MOVIMENTO CENTRAL 45MM C\/COLAR 10PCS ZINC. B890","price":6.55,"maxQuantity":30},{"marca":"GTA","code":"100.151.112","name":"PEDAL ALUM. CLIP DUPLO RX INGLES C\/TACOS SPD PRETO C\/ROL.","price":162.4,"maxQuantity":14},{"marca":"PACO","code":"100.151.162","name":"PEDAL NYLON PLATAF. RIDER INGLES S\/ESF.RAINBOW","price":34.22,"maxQuantity":18},{"marca":"PACO","code":"100.153.080","name":"PEDIVELA MONOBL. 26 ACO 165MM PRETO","price":13.39,"maxQuantity":56},{"marca":"GTA","code":"100.153.147","name":"PEDIVELA TRIPLO ACO 24\/34\/42D 170MM C\/PROT PRETO","price":23.8,"maxQuantity":30},{"marca":"GTA","code":"100.153.149","name":"PEDIVELA TRIPLO ACO 24\/34\/42D 170MM C\/PROT PRETO S\/LOGO","price":25.29,"maxQuantity":77},{"marca":"PACO","code":"100.156.224","name":"RAIO 263 X 2.5 ZINC.","price":32.73,"maxQuantity":177},{"marca":"PACO","code":"100.164.138","name":"RODA LIVRE 20D. TODA ESFERA DOURADA S\/CAIXA","price":7.44,"maxQuantity":20},{"marca":"PACO","code":"100.164.085","name":"RODA LIVRE 6V. 14\/28D DOURADA (NAO INDEX)","price":16.37,"maxQuantity":133},{"marca":"PACO","code":"100.164.241","name":"RODA LIVRE 7V. 14\/28D INDEX DOURADA ULT.PTO","price":17.7,"maxQuantity":10},{"marca":"PACO","code":"100.164.308","name":"RODA LIVRE 7V. 14\/34D INDEX DOURADA ULT.PTO MEGA RANGE","price":22.32,"maxQuantity":10},{"marca":"GTA","code":"100.165.096","name":"SELIM BEACH 2M. MARROM","price":35.71,"maxQuantity":145},{"marca":"GTA","code":"100.165.145","name":"SELIM BMX PU C\/CARRINHO","price":21.57,"maxQuantity":608},{"marca":"GTA","code":"100.165.083","name":"SELIM MTB NIMBUS GEL TECH VAZADO ARAME S\/C PRETO BLISTER","price":32.73,"maxQuantity":300},{"marca":"GTA","code":"100.165.147","name":"SELIM PASSEIO COMFORT VAZADO C.FERRO MOLAS ELASTOME","price":32.73,"maxQuantity":128}]
+export const products = [
+	{
+	"marca":"ABSOLUTE",
+		"code":"100.101.012",
+		"name":"ABRACADEIRA SELIM ALUM 31.8MM C\/BLOCAG. POLIDA",
+		"price":5.21,
+		"maxQuantity":10
+	},
+		
+	{
+	"marca":"ABSOLUTE",
+		"code":"100.101.007",
+		"name":"ABRACADEIRA SELIM ALUM 31.8MM C\/BLOCAG. PRETA NERO HS06",
+		"price":6.7,
+		"maxQuantity":10
+	},
+		
+	{
+	"marca":"TANGSHAN",
+		"code":"100.171.059",
+		"name":"ADAPTADOR P\/VALVULA PRESTA ALUM. NATURAL (UNID.)",
+		"price":2.23,
+		"maxQuantity":10
+	},
+		
+	{
+	"marca":"VZAN",
+		"code":"025.104.065",
+		"name":"ARO ALUM. 26X1.1\/2 AERO 36F. ESCAPE 260 PTO AD.PTO P04",
+		"price":53.65,
+		"maxQuantity":10
+	},
+		
+	{
+	"marca":"PIRELLI",
+		"code":"042.110.005",
+		"name":"CAMARA 26 PE",
+		"price":13.36,
+		"maxQuantity":10
+	},
+		
+	{
+	"marca":"BISON",
+		"code":"100.110.069",
+		"name":"CAMARA 26 V.AMERIC. 33MM (1.95 A 2.125)",
+		"price":9.93,
+		"maxQuantity":10
+	},
+		
+	{
+	"marca":"SUNRUN",
+		"code":"100.118.126",
+		"name":"CAMBIO TRAS 7VEL S\/GANCH. PRETO INDEX CAGE LONGO P\/43D",
+		"price":15.32,
+		"maxQuantity":10
+	},
+		
+	{
+	"marca":"WENCUN",
+		"code":"100.119.054",
+		"name":"CANOTE ACO RETO 25.4 X 300MM PRETO",
+		"price":8.18,
+		"maxQuantity":10
+	},
+		
+	{
+	"marca":"IMPORTADO",
+		"code":"100.119.062",
+		"name":"CANOTE ACO RETO 27.2 X 300MM PRETO",
+		"price":6.25,
+		"maxQuantity":10
+	},
+		
+	{
+	"marca":"IMPORTADO",
+		"code":"100.122.004",
+		"name":"CARRINHO P\/SELIM 05 PCS PRETO CORRIDA",
+		"price":8.18,
+		"maxQuantity":10
+	},
+		
+	{
+	"marca":"LOGAN",
+		"code":"100.123.082",
+		"name":"CESTA ARAM. 26 GRANDE MARROM 34X27X26 OVAL C\/SUP.E HAS",
+		"price":46.12,
+		"maxQuantity":10
+	},
+		
+	{
+	"marca":"IMPORTADO",
+		"code":"100.126.031",
+		"name":"CONDUITE PRETO TEFLON 20M",
+		"price":22.32,
+		"maxQuantity":10
+	},
+		
+	{
+	"marca":"PROJEMA",
+		"code":"087.131.002",
+		"name":"EIXO DIANT. 145MM C\/BAT S\/ROL C\/ESPAC. ZINC.",
+		"price":10.41,
+		"maxQuantity":10
+	},
+		
+	{
+	"marca":"UNIUM",
+		"code":"031.158.002",
+		"name":"ESTOJO REMENDO A FRIO C\/6REM.+1COLA+1LIXA",
+		"price":11.46,
+		"maxQuantity":10
+	},
+		
+	{
+	"marca":"SAFETIRE",
+		"code":"100.177.019",
+		"name":"FITA ANTIFURO P\/PNEU 29\/26\/27.5 (PAR) VERDE 35MMX2.30MT",
+		"price":45.68,
+		"maxQuantity":10
+	},
+		
+	{
+	"marca":"ABSOLUTE",
+		"code":"100.177.052",
+		"name":"FITA ANTIFURO P\/PNEU 29\/26\/27.5 38MM PUNCTAPE",
+		"price":27.52,
+		"maxQuantity":10
+	},
+		
+	{
+	"marca":"GTA",
+		"code":"100.136.142",
+		"name":"FREIO V-BRAKE ALUM 04 PCS ORBITAL POL.",
+		"price":22.32,
+		"maxQuantity":10
+	},
+		
+	{
+	"marca":"GANTECH",
+		"code":"071.138.061",
+		"name":"GANCHEIRA OGGI FLOAT\/SPACELINE VEGA\/THOR AZONIC POL. -",
+		"price":27.55,
+		"maxQuantity":10
+	},
+		
+	{
+	"marca":"GTA",
+		"code":"100.138.063",
+		"name":"GANCHEIRA PARA QUADRO START",
+		"price":17.85,
+		"maxQuantity":10
+	},
+		
+	{
+	"marca":"ABSOLUTE",
+		"code":"100.139.164",
+		"name":"GARFO SUSP. 29 ACO AHEAD PRETO CROM.C\/TRAVA",
+		"price":157.71,
+		"maxQuantity":10
+	},
+		
+	{
+	"marca":"PACO",
+		"code":"100.139.095",
+		"name":"GARFO SUSP. 29 ACO AHEAD PRETO P\/F.DISCO",
+		"price":60.9,
+		"maxQuantity":10
+	},
+		
+	{
+	"marca":"C.JIANGSU",
+		"code":"100.141.054",
+		"name":"GUIDAO ACO SUECO 26 C\/SUP. CHANFR. 21MM CROM. MYD-HB02",
+		"price":62.35,
+		"maxQuantity":10
+	},
+		
+	{
+	"marca":"GTA",
+		"code":"100.141.097",
+		"name":"GUIDAO ALUM MEGA OVER BAIXO 31.8X800X35MM BUTTED AZUL 5",
+		"price":52.07,
+		"maxQuantity":10
+	},
+		
+	{
+	"marca":"GTA",
+		"code":"100.141.082",
+		"name":"GUIDAO ALUM MEGA OVER BAIXO 31.8X800X35MM BUTTED DOURAD",
+		"price":52.07,
+		"maxQuantity":10
+	},
+		
+	{
+	"marca":"GTA",
+		"code":"100.141.096",
+		"name":"GUIDAO ALUM MEGA OVER BAIXO 31.8X800X35MM BUTTED VERM.5",
+		"price":52.07,
+		"maxQuantity":10
+	},
+		
+	{
+	"marca":"GTA",
+		"code":"100.146.046",
+		"name":"MACANETA ALUM. VB PRETA C\/PUX. POL.",
+		"price":17.11,
+		"maxQuantity":10
+	},
+		
+	{
+	"marca":"GTA",
+		"code":"100.137.035",
+		"name":"MANGUEIRA P\/FREIO HIDRAULICO (1 METRO)",
+		"price":10.41,
+		"maxQuantity":10
+	},
+		
+	{
+	"marca":"GTI",
+		"code":"100.148.151",
+		"name":"MOVIMENTO CENTRAL SEL. 34.7 X 122MM C\/ROL. PTO C\/PARAF.",
+		"price":14.13,
+		"maxQuantity":10
+	},
+		
+	{
+	"marca":"REACTION",
+		"code":"100.177.059",
+		"name":"OCULOS CICLISMO ESPELHADO 05",
+		"price":37.2,
+		"maxQuantity":10
+	},
+		
+	{
+	"marca":"REACTION",
+		"code":"100.177.060",
+		"name":"OCULOS CICLISMO ESPELHADO 06",
+		"price":37.2,
+		"maxQuantity":10
+	},
+		
+	{
+	"marca":"ABSOLUTE",
+		"code":"100.150.046",
+		"name":"PASTILHA FR. DISCO ABS-03S ORG. RETANGULAR C\/MOLA",
+		"price":14.88,
+		"maxQuantity":10
+	},
+		
+	{
+	"marca":"ABSOLUTE",
+		"code":"100.150.103",
+		"name":"PASTILHA FR. DISCO M01-R2 ORG.C\/MOLA",
+		"price":5.21,
+		"maxQuantity":10
+	},
+		
+	{
+	"marca":"GTI",
+		"code":"100.150.069",
+		"name":"PATIM V-BRAKE ORBITAL 70MM PRETO BLISTER",
+		"price":3.87,
+		"maxQuantity":10
+	},
+		
+	{
+	"marca":"NECO",
+		"code":"100.151.026",
+		"name":"PEDAL ALUM. PLATAF. INGLES C\/ESF. PRETO",
+		"price":27.55,
+		"maxQuantity":10
+	},
+		
+	{
+	"marca":"GTA",
+		"code":"100.153.170",
+		"name":"PEDIVELA SIMPLES ALUM 34D 170MM P\/P.QUADR. VERM.",
+		"price":99.68,
+		"maxQuantity":10
+	},
+		
+	{
+	"marca":"LEVORIN",
+		"code":"022.115.141",
+		"name":"PNEU 29X2.10 ERUPTION",
+		"price":52.69,
+		"maxQuantity":10
+	},
+		
+	{
+	"marca":"PACO",
+		"code":"100.115.079",
+		"name":"PNEU 29X2.10 NOMAD SRI-143 C\/FAIXA BEGE",
+		"price":43.91,
+		"maxQuantity":10
+	},
+		
+	{
+	"marca":"LEVORIN",
+		"code":"022.115.140",
+		"name":"PNEU 29X2.30 ERUPTION",
+		"price":56.0,
+		"maxQuantity":10
+	},
+		
+	{
+	"marca":"DSI",
+		"code":"100.115.135",
+		"name":"PNEU 700X23 ESTRADA PRETO SRI-89",
+		"price":36.91,
+		"maxQuantity":10
+	},
+		
+	{
+	"marca":"DSI",
+		"code":"100.115.102",
+		"name":"PNEU 700X28 ESTRADA PRETO SRI-104",
+		"price":43.28,
+		"maxQuantity":10
+	},
+		
+	{
+	"marca":"HWX",
+		"code":"100.156.313",
+		"name":"RAIO 290 X 2.0 INOX (36 RAIOS)",
+		"price":29.0,
+		"maxQuantity":10
+	},
+		
+	{
+	"marca":"WESTER (BI",
+		"code":"015.157.001",
+		"name":"REFLETOR P\/PARALAMA TRAS MK 89 C\/PARAF. (10 PCS)",
+		"price":14.88,
+		"maxQuantity":10
+	},
+		
+	{
+	"marca":"TRI-DIAMON",
+		"code":"100.164.303",
+		"name":"RODA LIVRE 14D. TODA ESFERA DOURADA",
+		"price":14.88,
+		"maxQuantity":10
+	},
+		
+	{
+	"marca":"GOAL",
+		"code":"100.164.221",
+		"name":"RODA LIVRE 18D. C\/SEPARADOR DOURADA",
+		"price":8.63,
+		"maxQuantity":10
+	},
+		
+	{
+	"marca":"ALGOO",
+		"code":"410.158.002",
+		"name":"SELANTE P\/PNEU BIKE S\/CAM. (TUBELESS) ANTIFURO 500ML",
+		"price":57.28,
+		"maxQuantity":10
+	},
+		
+	{
+	"marca":"ROYAL CICL",
+		"code":"007.165.006",
+		"name":"SELIM BC 2M. PVC PRETO C.FERRO",
+		"price":36.98,
+		"maxQuantity":10
+	},
+		
+	{
+	"marca":"ROYAL CICL",
+		"code":"007.165.014",
+		"name":"SELIM INFANTIL TOY 16 PVC PRETO C\/CANOTE 7\/8",
+		"price":18.85,
+		"maxQuantity":10
+	},
+		
+	{
+	"marca":"CAIRU",
+		"code":"014.165.044",
+		"name":"SELIM MTB 2M. 508 AMS PRETO",
+		"price":38.23,
+		"maxQuantity":10
+	},
+		
+	{
+	"marca":"CAIRU",
+		"code":"014.165.090",
+		"name":"SELIM MTB 507 PU PRETO RAJADO C.FERRO",
+		"price":28.5,
+		"maxQuantity":10
+	},
+		
+	{
+	"marca":"ABSOLUTE",
+		"code":"100.166.073",
+		"name":"SUPORTE GARRAFA LUCID1 PRETO AZUL",
+		"price":11.9,
+		"maxQuantity":10
+	},
+		
+	{
+	"marca":"ABSOLUTE",
+		"code":"100.166.074",
+		"name":"SUPORTE GARRAFA LUCID1 PRETO VERM\/AMR",
+		"price":11.9,
+		"maxQuantity":10
+	},
+		
+	{
+	"marca":"IMPORTADO",
+		"code":"100.167.067",
+		"name":"SUPORTE GUIDAO ACO CROSS 4PRF HS011 PRETO",
+		"price":22.48,
+		"maxQuantity":10
+	},
+		
+	{
+	"marca":"GTA",
+		"code":"100.137.031",
+		"name":"TERMINAL E OLIVA P\/CONEXAO MANG.HIDRAUL. (UNID.) COBRE",
+		"price":4.46,
+		"maxQuantity":10
+	},
+		
+	{
+	"marca":"IMPORTADO",
+		"code":"100.171.067",
+		"name":"VALVULA TORRE GROSSA C\/TAMPA PLAST.",
+		"price":2.98,
+		"maxQuantity":10
+	}]
