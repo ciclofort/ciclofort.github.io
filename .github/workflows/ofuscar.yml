@@ -65,6 +65,11 @@ jobs:
         
         sed -i -E "s/src=\"([^\/]+)\.js\"/src=\"dist\/\1.${SHORT_SHA}.js\"/g" index.html
 
+    - name: Remover JavaScripts antigos da raiz
+      run: |
+        rm -f *.js
+        rm -rf data/
+
     - name: Publicar no GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4
       with:
